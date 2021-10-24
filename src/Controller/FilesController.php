@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Form\UploadForm;
+
 /**
  * Files Controller
  *
@@ -101,5 +103,12 @@ class FilesController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function upload()
+    {
+        $uploadForm = new UploadForm();
+
+        $this->set(compact('uploadForm'));
     }
 }
