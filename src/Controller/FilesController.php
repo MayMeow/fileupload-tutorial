@@ -24,9 +24,14 @@ class FilesController extends AppController
 
         $this->loadComponent('FileUpload.Upload', [
             'fieldName' => 'file',
+            'storagePath' => 'fileupload.tutorial', // bucket name
+            'storage_type' => 's3'
         ]);
 
-        $this->loadComponent('FileUpload.Download');
+        $this->loadComponent('FileUpload.Download', [
+            'storagePath' => 'fileupload.tutorial', // bucket name
+            'storage_type' => 's3'
+        ]);
     }
 
     /**
