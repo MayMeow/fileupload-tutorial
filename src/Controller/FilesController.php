@@ -144,4 +144,23 @@ class FilesController extends AppController
 
         $this->set(compact('uploadForm'));
     }
+
+    /**
+     * @param $fileName
+     * @return \Cake\Http\Response
+     */
+    public function download($fileName)
+    {
+        $downloadedFile = $this->Download->getFile($fileName);
+
+        $response = $this->response;
+        $response = $response->withStringBody($downloadedFile->getFileContent());
+        $response = $response->withType($downloadedFile->getFileType());
+
+        if ($this->request->getParam('?.download') == true) {
+            $response = $response->withDownload($fileName);
+        }
+
+        return $response;
+    }
 }

@@ -23,7 +23,7 @@
                 <?php foreach ($files as $file): ?>
                 <tr>
                     <td><?= $this->Number->format($file->id) ?></td>
-                    <td><?= h($file->name) ?></td>
+                    <td><?= $this->Html->link($file->name, ['action' => 'download', $file->name, '?' => ['download' => false]]) ?></td>
                     <td><?= h($file->path) ?></td>
                     <td><?= h($file->created) ?></td>
                     <td><?= h($file->modified) ?></td>
