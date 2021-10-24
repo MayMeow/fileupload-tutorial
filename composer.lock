@@ -1180,16 +1180,16 @@
         },
         {
             "name": "maymeow/file-upload",
-            "version": "v1.1.1",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MayMeow/cakephp-fileupload.git",
-                "reference": "3fc387aa461449b4e1336f6fc062fa4de8833510"
+                "reference": "2d139a09b5f95f25984f694e2d82bad65af6bc14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MayMeow/cakephp-fileupload/zipball/3fc387aa461449b4e1336f6fc062fa4de8833510",
-                "reference": "3fc387aa461449b4e1336f6fc062fa4de8833510",
+                "url": "https://api.github.com/repos/MayMeow/cakephp-fileupload/zipball/2d139a09b5f95f25984f694e2d82bad65af6bc14",
+                "reference": "2d139a09b5f95f25984f694e2d82bad65af6bc14",
                 "shasum": ""
             },
             "require": {
@@ -1215,7 +1215,7 @@
             "description": "FileUpload plugin for CakePHP",
             "support": {
                 "issues": "https://github.com/MayMeow/cakephp-fileupload/issues",
-                "source": "https://github.com/MayMeow/cakephp-fileupload/tree/v1.1.1"
+                "source": "https://github.com/MayMeow/cakephp-fileupload/tree/v1.1.2"
             },
             "funding": [
                 {
@@ -1223,7 +1223,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-10-24T07:34:39+00:00"
+            "time": "2021-10-24T08:51:39+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -6023,7 +6023,6 @@
                     "type": "github"
                 }
             ],
-            "abandoned": true,
             "time": "2020-09-28T06:45:17+00:00"
         },
         {
