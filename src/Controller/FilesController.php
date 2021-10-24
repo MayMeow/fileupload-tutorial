@@ -121,9 +121,26 @@ class FilesController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
+    /**
+     * @return \Cake\Http\Response|void|null
+     * @throws \HttpException
+     */
     public function upload()
     {
         $uploadForm = new UploadForm();
+
+        if ($this->request->is('post')) {
+            $uploadedFile = $this->Upload->getFile($this->request);
+
+            $file = $this->Files->newEmptyEntity();
+
+            $file->name = $uploadedFile->getFileName();
+            $file->path = $uploadedFile->getPath();
+
+            $this->Files->save($file);
+
+            return $this->redirect(['action' => 'index']);
+        }
 
         $this->set(compact('uploadForm'));
     }
